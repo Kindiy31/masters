@@ -2,6 +2,7 @@ import data
 from texts import lang_
 import pymysql.cursors
 import datetime
+
 lang = lang_().get_language()
 
 class db:
