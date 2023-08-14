@@ -8,7 +8,7 @@ parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
 
 sys.path.insert(0, parent_dir)
 import os
-app = flask.Flask(__name__, static_url_path='/static')
+app = flask.Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
 
 
