@@ -10,7 +10,7 @@ sys.path.insert(0, parent_dir)
 import os
 app = flask.Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
-
+print(app)
 @app.route('/', methods=['GET', 'POST'])
 def hand():
     return '403'
