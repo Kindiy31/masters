@@ -4,7 +4,7 @@ database_info = {
     'host': '127.0.0.1',
     'port': 3306,
     'user': 'root',
-    'password': 'Monexo2023',
+    'password': 'Maksum2002',
     'name': 'masters'
 }
 link_bot = 't.me/master_follow_bot'
