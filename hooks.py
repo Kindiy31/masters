@@ -12,7 +12,7 @@ app = flask.Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
 
 
-@app.route('/hook/', methods=['GET', 'POST'], strict_slashes=False)
+@app.route('/hook/', methods=['GET', 'POST'])
 def webhook_handler():
     response_text = ('POST-запит оброблено успішно')
     os.system('git pull')
