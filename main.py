@@ -31,11 +31,11 @@ class Funnel:
             back_fnc(id=self.id)
 
         elif text == self.lang.how_work():
-            msg = bot.send_message(self.id, self.lang.how_work_about(), reply_markup=self.kb.how_work_kb())
+            msg = bot.send_message(self.id, self.lang.how_work_about(), reply_markup=self.kb.how_work_kb(), parse_mode='HTML')
             bot.register_next_step_handler(msg, self.funnel_handler, text)
 
         elif text == self.lang.referal_system():
-            msg = bot.send_message(self.id, self.lang.referal_system_about(), reply_markup=self.kb.sign_in())
+            msg = bot.send_message(self.id, self.lang.referal_system_about(), reply_markup=self.kb.sign_in(), parse_mode='HTML')
             bot.register_next_step_handler(msg, self.funnel_handler, text)
 
         elif text == self.lang.who_use():
@@ -107,10 +107,10 @@ class Funnel:
                 before = 'start'
             print(before, markup, text)
             if markup and text:
-                msg = bot.send_message(self.id, text, reply_markup=markup)
+                msg = bot.send_message(self.id, text, reply_markup=markup, parse_mode='HTML')
             else:
                 msg = bot.send_photo(self.id, data.banner_photo_id, caption=self.lang.banner(),
-                                     reply_markup=self.kb.funnel_kb())
+                                     reply_markup=self.kb.funnel_kb(), parse_mode='HTML')
             bot.register_next_step_handler(msg, self.funnel_handler, before)
 
         else:
